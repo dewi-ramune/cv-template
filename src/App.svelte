@@ -8,274 +8,304 @@
 
 <style>
   :root {
-    --text-colour: #656565;
-    --margin: 1em;
-    --margin-half: calc(var(--margin) / 2);
-    --margin-2x: calc(var(--margin) * 2);
+    --text-colour: #0d0d0d;
+    --primary: hsl(0, 0%, 90%);
+    --bgrd: hsl(0, 0%, 98%);
+    --border: solid 4px hsl(0, 0%, 0%);
+    --spacing: 1em;
+    --spacing-1: calc(var(--spacing) / 4);
+    --spacing-2: calc(var(--spacing) / 2);
+    --spacing-5: calc(var(--spacing) * 2);
   }
 
   p {
     margin: 0;
   }
 
-  main {
+  * {
+    color: var(--text-colour);
+    box-sizing: border-box;
   }
 
-  .page-body {
+  main {
+    width: 794px;
+    height: 1123px;
     display: grid;
-    grid-template-columns: 6fr 2.5fr;
-    grid-column-gap: calc(var(--margin) * 4);
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: max-content 1fr max-content; */
+    grid-template-rows: auto auto 1fr auto;
+    /* background-color: var(--bgrd); */
+    border: var(--border);
   }
 
   .content-section {
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    margin: 0 0 var(--margin-2x) 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
   }
 
   .section-header {
-    font-size: 1.25em;
-    margin: 0 0 var(--margin-half) 0;
+    font-size: 1.5em;
+    margin: 0 0 var(--spacing-2) 0;
   }
 
   .skill-block {
-    margin: var(--margin-half) 0;
+    margin: var(--spacing-2) 0;
   }
 
   .skill-block.first {
     margin-top: 0;
+  }
+  .skill-block > span {
+    display: block;
+  }
+  .skill-block > p {
+    display: inline-block;
+  }
+  .skill-block > p:not(:last-child)::after {
+    content: "\00a0\25cf\00a0";
+  }
+
+  .text-h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .contact {
+    padding: var(--spacing);
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: var(--border);
+  }
+  .experience {
+    grid-column: 1/-1;
+    border-bottom: var(--border);
+  }
+
+  .education {
+    border-right: var(--border);
+  }
+
+  .skills {
+    border-right: var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--spacing-5);
+  }
+  .skills > header {
+    grid-column: 1/-1;
   }
 </style>
 
 <main>
 
   <Header />
-  <div class="page-body">
+
+  <div class="contact">
     <div>
-      <div class="content-section">
-        <header class="section-header">Selected Experience</header>
+      <p>dewi@ramune.io</p>
+    </div>
+    <div>
+      <p>dewiwaugh</p>
+    </div>
+    <div>
+      <p>https://dewi.ramune.io/</p>
+    </div>
+  </div>
 
-        <Job client="Frozen Banana Stand" where="The OC" when="2006">
-          <Project role="Mr Manager">
-            <span slot="tools">
-              <ToolTag tag="css" />
-              <ToolTag tag="python" />
-              <ToolTag tag="vue" />
-              <ToolTag tag="aws" />
+  <div class="content-section experience">
+    <header class="section-header">Selected Experience</header>
 
-              <ToolTag tag="react" />
-              <ToolTag tag="redis" />
-            </span>
-            <li>There's always money in the banana stand</li>
-            <li>I've made a huge mistake</li>
-            <li>I make a meal for my friends</li>
-            <li>Try to make it delicious</li>
-            <li>Try to keep it nutritious</li>
-            <li>Create wonderful dishes</li>
-            <li>Not one of them thinks about the way I feel</li>
-            <li>Nobody compliments the meal</li>
-          </Project>
-        </Job>
+    <Job
+      client="A2B Assessments Ltd"
+      where="Tokyo / London"
+      when="Nov-18 – Current">
+      <Project role="DESIGN LEAD / DEVELOPER">
+        <span slot="tools">
+          <ToolTag tag="figma" />
+          <ToolTag tag="react" />
+          <ToolTag tag="css" />
+        </span>
+        <li>
+          Design lead and main front-end developer to replace a
+          spreadsheet-based legacy system with a bespoke cloud-based CRM.
+        </li>
+        <li>
+          Built and maintained a brand new design system and UI component
+          library with an emphasis on user accessibility.
+        </li>
+        <li>Created wireframes / prototypes.</li>
+        <li>
+          Engaged users in weekly meetings to iterate through designs and ensure
+          prototypes were fit for purpose.
+        </li>
+        <li>
+          Front-end development with GraphQL integration and BDD integration
+          testing in Cypress.
+        </li>
+        <li>Ran workshops and shadowed users to gather requirements.</li>
+        <li>Produced and maintained user journeys and process maps.</li>
+      </Project>
+    </Job>
 
-        <Job client="Gothic Castle" where="Wee Brain" when="2007">
-          <Project role="Leather Daddy">
-            <span slot="tools">
-              <ToolTag tag="k8s" />
-              <ToolTag tag="node" />
-              <ToolTag tag="elixir" />
-              <ToolTag tag="elastic" />
-              <ToolTag tag="graphql" />
-            </span>
-            <li>Baby, you've got a stew going!</li>
-            <li>You're gonna get some hop-ons.</li>
-            <li>He doesn't cook or clean</li>
-            <li>Is that the kind of thing that you think you might be into?</li>
-          </Project>
-        </Job>
+    <Job client="Various Clients" where="London" when="Jun-17 – Nov-18">
+      <Project role="CREATIVE TECHNOLOGIST">
+        <span slot="tools">
+          <ToolTag tag="illustrator" />
+          <ToolTag tag="photoshop" />
+          <ToolTag tag="svg" />
+          <ToolTag tag="vue" />
+          <ToolTag tag="css" />
+        </span>
+        <li>
+          Designed a gas station kiosk prototype for Orlen Stop Cafe to
+          implement across their cafes nationwide.
+        </li>
+        <li>
+          Designed a self-service kiosk protoype for KFC to be demoed at a
+          tradeshow.
+        </li>
+        <li>
+          Logo design and branding guidance, e.g. colour palettes, typefaces.
+        </li>
+        <li>
+          Collaborated with project team to prepare proposals, wireframes and
+          original artwork for client bids.
+        </li>
+      </Project>
+    </Job>
 
-        <Job client="Frozen Banana Stand" where="The OC" when="2006">
-          <Project role="Mr Manager">
-            <span slot="tools">
-              <ToolTag tag="css" />
-              <ToolTag tag="python" />
-              <ToolTag tag="vue" />
-              <ToolTag tag="aws" />
+    <Job client="CREAT3D" where="Reading" when="Jan-17 – Feb-18">
+      <Project role="DESIGNER / FRONT-END DEVELOPER">
+        <span slot="tools">
+          <ToolTag tag="sketch" />
+          <ToolTag tag="vue" />
+          <ToolTag tag="css" />
+        </span>
+        <li>
+          Designed and built UI for a mobile app to distribute and manage
+          invitations and responses to company events.
+        </li>
+        <li>
+          Designed and built UI for a company branded mobile app to collect
+          customer details at trade events.
+        </li>
+      </Project>
+    </Job>
 
-              <ToolTag tag="react" />
-              <ToolTag tag="redis" />
-            </span>
-            <li>There's always money in the banana stand</li>
-            <li>I've made a huge mistake</li>
-            <li>I make a meal for my friends</li>
-            <li>Try to make it delicious</li>
-            <li>Try to keep it nutritious</li>
-            <li>Create wonderful dishes</li>
-            <li>Not one of them thinks about the way I feel</li>
-            <li>Nobody compliments the meal</li>
-          </Project>
-        </Job>
+    <Job client="EDF Energy" where="London" when="Jan-12 – Nov-16">
+      <Project role="RISK OPERATIONS MANAGER">
+        <span slot="tools">
+          <ToolTag tag="javascript" />
+          <ToolTag tag="html" />
+          <ToolTag tag="css" />
+        </span>
+        <li>
+          Managed a team of 6 analysts to provide accurate and timely MI
+          reporting.
+        </li>
+        <li>
+          Collaborated with project team to prepare proposals, wireframes and
+          original artwork for client bids.
+        </li>
+      </Project>
+      <Project role="SENIOR BUSINESS ANALYST">
+        <li>
+          Responsible for stakeholder engagement across 15 different teams for
+          organization-wide trading system replacement project.
+        </li>
+      </Project>
+      <Project role="SENIOR ANALYST">
+        <li>
+          Performed data analysis and built various models and tools in VBA, MS
+          Excel, MS Access, SQL, MatLab, e.g. forecasting energy prices, value
+          at risk, PCA.
+        </li>
+      </Project>
+    </Job>
 
-        <Job client="Gothic Castle" where="Wee Brain" when="2007">
-          <Project role="Leather Daddy">
-            <span slot="tools">
-              <ToolTag tag="k8s" />
-              <ToolTag tag="node" />
-              <ToolTag tag="elixir" />
-              <ToolTag tag="elastic" />
-              <ToolTag tag="graphql" />
-            </span>
-            <li>Baby, you've got a stew going!</li>
-            <li>You're gonna get some hop-ons.</li>
-            <li>He doesn't cook or clean</li>
-            <li>Is that the kind of thing that you think you might be into?</li>
-          </Project>
-        </Job>
+    <Job client="Marubeni" where="London" when="Oct-08 – Dec-11">
+      <Project role="ANALYST">
 
-        <Job client="Frozen Banana Stand" where="The OC" when="2006">
-          <Project role="Mr Manager">
-            <span slot="tools">
-              <ToolTag tag="css" />
-              <ToolTag tag="python" />
-              <ToolTag tag="vue" />
-              <ToolTag tag="aws" />
+        <li>
+          Selected from over 29,000 employees worldwide to attend annual
+          training workshop at Tokyo HQ.
+        </li>
+      </Project>
+    </Job>
+  </div>
 
-              <ToolTag tag="react" />
-              <ToolTag tag="redis" />
-            </span>
-            <li>There's always money in the banana stand</li>
-            <li>I've made a huge mistake</li>
-            <li>I make a meal for my friends</li>
-            <li>Try to make it delicious</li>
-            <li>Try to keep it nutritious</li>
-            <li>Create wonderful dishes</li>
-            <li>Not one of them thinks about the way I feel</li>
-            <li>Nobody compliments the meal</li>
-          </Project>
-        </Job>
+  <div class="content-section education">
+    <header class="section-header">Education</header>
+    <div class="skill-block first">
+      <span class="text-h3">UNIVERSITY OF BATH, UK</span>
+      <p>BSc (Hons) Mathematics 2:1</p>
+    </div>
+  </div>
 
-        <Job client="Gothic Castle" where="Wee Brain" when="2007">
-          <Project role="Leather Daddy">
-            <span slot="tools">
-              <ToolTag tag="k8s" />
-              <ToolTag tag="node" />
-              <ToolTag tag="elixir" />
-              <ToolTag tag="elastic" />
-              <ToolTag tag="graphql" />
-            </span>
-            <li>Baby, you've got a stew going!</li>
-            <li>You're gonna get some hop-ons.</li>
-            <li>He doesn't cook or clean</li>
-            <li>Is that the kind of thing that you think you might be into?</li>
-          </Project>
-        </Job>
+  <div class="content-section skills">
+    <header class="section-header">Skills</header>
 
-        <Job client="Frozen Banana Stand" where="The OC" when="2006">
-          <Project role="Mr Manager">
-            <span slot="tools">
-              <ToolTag tag="css" />
-              <ToolTag tag="python" />
-              <ToolTag tag="vue" />
-              <ToolTag tag="aws" />
-
-              <ToolTag tag="react" />
-              <ToolTag tag="redis" />
-            </span>
-            <li>There's always money in the banana stand</li>
-            <li>I've made a huge mistake</li>
-            <li>I make a meal for my friends</li>
-            <li>Try to make it delicious</li>
-            <li>Try to keep it nutritious</li>
-            <li>Create wonderful dishes</li>
-            <li>Not one of them thinks about the way I feel</li>
-            <li>Nobody compliments the meal</li>
-          </Project>
-        </Job>
-
-        <Job client="Gothic Castle" where="Wee Brain" when="2007">
-          <Project role="Leather Daddy">
-            <span slot="tools">
-              <ToolTag tag="k8s" />
-              <ToolTag tag="node" />
-              <ToolTag tag="elixir" />
-              <ToolTag tag="elastic" />
-              <ToolTag tag="graphql" />
-            </span>
-            <li>Baby, you've got a stew going!</li>
-            <li>You're gonna get some hop-ons.</li>
-            <li>He doesn't cook or clean</li>
-            <li>Is that the kind of thing that you think you might be into?</li>
-          </Project>
-        </Job>
-
+    <div>
+      <div class="skill-block first">
+        <span class="text-h3">DESIGN</span>
+        <p>Photoshop</p>
+        <p>Illustrator</p>
+        <p>XD</p>
+        <p>Sketch</p>
+        <p>Figma</p>
+        <p>Storybook</p>
+        <p>pen & paper</p>
+      </div>
+      <div class="skill-block">
+        <span class="text-h3">ASSET MANAGEMENT</span>
+        <p>Git</p>
+        <p>Creative Cloud</p>
       </div>
     </div>
 
-    <div class="column">
-      <div class="content-section">
-        <header class="section-header">About Me</header>
-        <p>
-          Jan met another man Liza got amnesia, just forgot who I am Felicity
-          said there was no electricity Emily, no chemistry Fran, ran, Bruce
-          turned out to be a man Flo had to go, I couldn't go with the flow
-          Carol Brown just took the bus out of town But I'm hoping that you'll
-          stick around.
-        </p>
-      </div>
-      <div class="content-section">
-        <header class="section-header">Education</header>
-        <div class="skill-block" style="margin-top: 0">
-          <small>UNIVERSITY OF DARTLINGBORNE, UK</small>
-          <p>Maths or something, I did my best.</p>
-        </div>
-
+    <div>
+      <div class="skill-block">
+        <span class="text-h3">DEVELOPMENT</span>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>SVG</p>
+        <p>JavaScript</p>
+        <p>React</p>
+        <p>Vue</p>
+        <p>Svelte</p>
+        <p>Cypress</p>
+        <p>Cucumber</p>
       </div>
 
-      <div class="content-section">
-        <header class="section-header">Key Skills</header>
-
-        <div class="skill-block first">
-          <small>SKILL SECTION 1</small>
-          <p>Cooking hot ham water, being blue</p>
-        </div>
-
-        <div class="skill-block">
-          <small>SKILL SECTION 2</small>
-          <p>Cooking hot ham water, being blue</p>
-        </div>
-
-        <div class="skill-block">
-          <small>OTHER</small>
-          <p>Sandwiches</p>
-        </div>
-
+      <div class="skill-block">
+        <span class="text-h3">PLANNING</span>
+        <p>Trello</p>
+        <p>Asana</p>
+        <p>Agile</p>
       </div>
+    </div>
 
-      <div class="content-section">
-        <header class="section-header">Languages</header>
+  </div>
 
-        <div class="skill-block first">
-          <small>ENGLISH (UK)</small>
-          <p>Native</p>
-        </div>
-        <div class="skill-block first">
-          <small>English (US)</small>
-          <p>Beginner</p>
-        </div>
-      </div>
+  <div class="content-section">
+    <header class="section-header">Languages</header>
 
-      <div class="content-section">
-        <header class="section-header">Contact</header>
-        <div class="skill-block" style="margin-top: 0">
-          <p>tobias@bluemangroup.com</p>
-        </div>
-        <div class="skill-block" style="margin-top: 0">
-          <p>091 889 99383</p>
-        </div>
-        <div class="skill-block" style="margin-top: 0">
-          <p>https://github.com/ramuneio/cv-template</p>
-        </div>
-      </div>
+    <div class="skill-block first">
+      <span class="text-h3">ENGLISH</span>
+      <p>Native</p>
+    </div>
 
+    <div class="skill-block">
+      <span class="text-h3">INDONESIAN</span>
+      <p>Fluent</p>
+    </div>
+
+    <div class="skill-block">
+      <span class="text-h3">JAPANESE</span>
+      <p>Studying N4</p>
     </div>
   </div>
 

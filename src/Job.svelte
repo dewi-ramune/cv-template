@@ -7,7 +7,7 @@
 <style>
   .job {
     display: grid;
-    margin-bottom: calc(var(--margin) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
   }
 
   header {
@@ -18,8 +18,7 @@
     font-size: 1em;
     padding: 0;
     margin: 0;
-    color: var(--text-colour);
-    font-weight: 500;
+    font-weight: 100;
   }
 
   .projects {

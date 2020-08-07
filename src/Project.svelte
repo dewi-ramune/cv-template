@@ -3,8 +3,7 @@
 </script>
 
 <style>
-  h3,
-  h4 {
+  h3 {
     margin: 0;
     padding: 0;
     font-size: 1em;
@@ -12,11 +11,11 @@
   }
 
   .project {
-    margin: calc(var(--margin) / 2) 0 0 0;
+    margin: calc(var(--spacing) / 2) 0 0 0;
   }
 
   header {
-    margin-bottom: calc(var(--margin) / 2);
+    margin-bottom: calc(var(--spacing) / 2);
     display: grid;
     grid-template-columns: 1fr max-content;
   }
