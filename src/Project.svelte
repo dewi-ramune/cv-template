@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .project {

@@ -8,10 +8,14 @@
 
 <style>
   :root {
-    --text-colour: #0d0d0d;
+    --text-colour: hsl(220, 100%, 20%);
     --primary: hsl(0, 0%, 90%);
-    --bgrd: hsl(0, 0%, 98%);
-    --border: solid 4px hsl(0, 0%, 0%);
+    --bgrd: hsl(350, 100%, 97%);
+    --clr-border: hsl(0, 0%, 100%);
+    --width-border: 6px;
+    --width-avatar: 48px;
+    --width-square-1: 174px;
+    --border: solid var(--width-border) var(--clr-border);
     --spacing: 1em;
     --spacing-1: calc(var(--spacing) / 4);
     --spacing-2: calc(var(--spacing) / 2);
@@ -28,74 +32,95 @@
   }
 
   main {
-    width: 794px;
-    height: 1123px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    /* grid-template-columns: max-content 1fr max-content; */
-    grid-template-rows: auto auto 1fr auto;
-    /* background-color: var(--bgrd); */
-    border: var(--border);
+    grid-template-columns: var(--width-square-1) var(--width-square-1) 1fr;
+    grid-template-rows: var(--width-square-1) 751px var(--width-square-1);
+    gap: var(--width-border);
+    background-color: var(--bgrd);
+    padding: var(--width-border);
+    background: url(../grid.svg);
+    background-size: 100%;
   }
 
   .content-section {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing);
+    padding: var(--width-border);
+    position: relative;
   }
 
   .section-header {
-    font-size: 1.5em;
+    font-size: 1.75em;
     margin: 0 0 var(--spacing-2) 0;
+    text-transform: uppercase;
   }
 
   .skill-block {
     margin: var(--spacing-2) 0;
+    display: grid;
   }
 
   .skill-block.first {
     margin-top: 0;
   }
-  .skill-block > span {
-    display: block;
-  }
-  .skill-block > p {
+
+  .skills p {
     display: inline-block;
   }
-  .skill-block > p:not(:last-child)::after {
+  .skills p:not(:last-child)::after {
     content: "\00a0\25cf\00a0";
+    /* content: "\00a0\2b24\00a0";
+    font-size: 0.75rem; */
+    /* color: var(--clr-border); */
   }
 
   .text-h3 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
   }
 
-  .contact {
-    padding: var(--spacing);
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: var(--border);
-  }
   .experience {
-    grid-column: 1/-1;
-    border-bottom: var(--border);
+    grid-column: 2/-1;
+    /* border-bottom: var(--border); */
+    height: 100%;
+    max-height: 100%;
   }
 
   .education {
-    border-right: var(--border);
+    /* border-right: var(--border); */
+    display: flex;
+    flex-direction: column;
   }
 
   .skills {
-    border-right: var(--border);
+    /* border-right: var(--border); */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33px 1.5rem auto 1.5rem auto;
     column-gap: var(--spacing-5);
+    /* background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent var(--width-border),
+      var(--clr-border) var(--width-border),
+      var(--clr-border) calc(2 * var(--width-border))
+    ); */
   }
   .skills > header {
     grid-column: 1/-1;
+  }
+
+  .stripes {
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent var(--width-border),
+      var(--clr-border) var(--width-border),
+      var(--clr-border) calc(2 * var(--width-border))
+    );
+    border-top: var(--border);
   }
 </style>
 
@@ -103,23 +128,12 @@
 
   <Header />
 
-  <div class="contact">
-    <div>
-      <p>dewi@ramune.io</p>
-    </div>
-    <div>
-      <p>dewiwaugh</p>
-    </div>
-    <div>
-      <p>https://dewi.ramune.io/</p>
-    </div>
+  <div class="content-section ">
+    <header class="section-header">Experience</header>
   </div>
-
   <div class="content-section experience">
-    <header class="section-header">Selected Experience</header>
-
     <Job
-      client="A2B Assessments Ltd"
+      client="A2B Assessments"
       where="Tokyo / London"
       when="Nov-18 – Current">
       <Project role="DESIGN LEAD / DEVELOPER">
@@ -237,57 +251,15 @@
     </Job>
   </div>
 
-  <div class="content-section education">
-    <header class="section-header">Education</header>
-    <div class="skill-block first">
-      <span class="text-h3">UNIVERSITY OF BATH, UK</span>
-      <p>BSc (Hons) Mathematics 2:1</p>
-    </div>
-  </div>
-
-  <div class="content-section skills">
-    <header class="section-header">Skills</header>
-
-    <div>
+  <div class="education">
+    <div class="content-section">
+      <header class="section-header">Education</header>
       <div class="skill-block first">
-        <span class="text-h3">DESIGN</span>
-        <p>Photoshop</p>
-        <p>Illustrator</p>
-        <p>XD</p>
-        <p>Sketch</p>
-        <p>Figma</p>
-        <p>Storybook</p>
-        <p>pen & paper</p>
-      </div>
-      <div class="skill-block">
-        <span class="text-h3">ASSET MANAGEMENT</span>
-        <p>Git</p>
-        <p>Creative Cloud</p>
+        <span class="text-h3">UNIVERSITY OF BATH, UK</span>
+        <p>BSc (Hons) Mathematics 2:1</p>
       </div>
     </div>
-
-    <div>
-      <div class="skill-block">
-        <span class="text-h3">DEVELOPMENT</span>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>SVG</p>
-        <p>JavaScript</p>
-        <p>React</p>
-        <p>Vue</p>
-        <p>Svelte</p>
-        <p>Cypress</p>
-        <p>Cucumber</p>
-      </div>
-
-      <div class="skill-block">
-        <span class="text-h3">PLANNING</span>
-        <p>Trello</p>
-        <p>Asana</p>
-        <p>Agile</p>
-      </div>
-    </div>
-
+    <span class="stripes" />
   </div>
 
   <div class="content-section">
@@ -306,6 +278,45 @@
     <div class="skill-block">
       <span class="text-h3">JAPANESE</span>
       <p>Studying N4</p>
+    </div>
+  </div>
+
+  <div class="content-section skills">
+    <header class="section-header">Skills</header>
+
+    <span class="text-h3">DESIGN</span>
+    <span class="text-h3">DEVELOPMENT</span>
+    <div>
+      <p>Photoshop</p>
+      <p>Illustrator</p>
+      <p>XD</p>
+      <p>Sketch</p>
+      <p>Figma</p>
+      <p>Storybook</p>
+      <p>pen & paper</p>
+    </div>
+    <div>
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>SVG</p>
+      <p>JavaScript</p>
+      <p>React</p>
+      <p>Vue</p>
+      <p>Svelte</p>
+      <p>Cypress</p>
+      <p>Cucumber</p>
+    </div>
+
+    <span class="text-h3">ASSET MANAGEMENT</span>
+    <span class="text-h3">PLANNING</span>
+    <div>
+      <p>Git</p>
+      <p>Creative Cloud</p>
+    </div>
+    <div>
+      <p>Trello</p>
+      <p>Asana</p>
+      <p>Agile</p>
     </div>
   </div>
 

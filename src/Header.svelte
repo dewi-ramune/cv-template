@@ -6,14 +6,17 @@
   header {
     grid-column: 1/-1;
     margin: 0;
+    height: var(--width-square-1);
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: var(--width-square-1) 1fr;
+    grid-template-rows: 1fr auto;
     align-items: center;
-    border-bottom: var(--border);
+    /* border-bottom: var(--border); */
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 3em;
+    line-height: 1.125em;
     padding: 0;
     margin: 0;
   }
@@ -27,22 +30,60 @@
   }
 
   header > div {
-    padding: var(--spacing);
+    box-sizing: border-box;
+    position: relative;
   }
 
   .profile {
-    border-left: var(--border);
+    padding: var(--spacing);
   }
   .profile p:not(:last-child) {
     margin-bottom: var(--spacing);
+  }
+
+  img {
+    /* position: absolute; */
+    display: block;
+    top: 0;
+    right: 0;
+    width: var(--width-avatar);
+    height: var(--width-avatar);
+    object-fit: scale-down;
+    border-radius: 0 0 0 50%;
+  }
+
+  .name {
+    padding: var(--spacing);
+    grid-row: 1/-1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 40px max-content 1fr);
+    gap: var(--width-border);
+    padding: 0 var(--width-border);
+  }
+  .contact > p {
+    padding: var(--spacing) var(--width-border);
   }
 </style>
 
 <header>
   <div class="name">
-    <h1>Dewi Gonzalez</h1>
-    <h2>ゴンザレス　デゥイ</h2>
+    <!-- <img alt="avatar" src="dewi.svg" /> -->
+
+    <h1>
+      Dewi
+      <br />
+      Gonzalez
+    </h1>
+    <!-- <h2>ゴンザレス　デゥイ</h2> -->
     <p>UX Designer / Developer</p>
+
   </div>
 
   <div class="content-section profile">
@@ -53,5 +94,17 @@
       experience and solving business problems through great design.
     </p>
     <p>I also love food, films and creating kawaii animal SVGs.</p>
+  </div>
+
+  <div class="contact">
+    <b />
+    <p>dewi@ramune.io</p>
+    <b />
+    <b />
+    <p>dewiwaugh</p>
+    <b />
+    <b />
+    <p>https://dewi.ramune.io/</p>
+    <b />
   </div>
 </header>

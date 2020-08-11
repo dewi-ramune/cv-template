@@ -1,0 +1,66 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 794 1123"
+	xml:space="preserve">
+
+	<style>
+		:root {
+			--hsl-white: 0, 100%, 100%;
+			--hsl-yellow: 320, 99%, 55%;
+			--hsl-red: 335, 100%, 52%;
+			--hsl-blue: 186, 99%, 28%;
+			--hsl-blue: 0, 8%, 80%;
+			--hsl-pink-l: 0, 98%, 95%;
+			--hsl-pink-l: 0, 8%, 90%;
+			--hsl-green-d: 170, 73%, 16%;
+		}
+	</style>
+
+	<defs>
+		<pattern id="horizontal-stripes" width="12" height="12" patternUnits="userSpaceOnUse"
+			patternTransform="rotate(90)">
+			<line stroke='hsl(var(--hsl-white))' stroke-width="12px" y2="12" />
+		</pattern>
+		<pattern id="vertical-stripes" width="12" height="12" patternUnits="userSpaceOnUse">
+			<line stroke='hsl(var(--hsl-white))' stroke-width="12px" y2="12" />
+		</pattern>
+	</defs>
+
+
+	<g stroke='hsl(var(--hsl-white))' stroke-width="6" fill='hsl(var(--hsl-pink-l))'>
+		<rect x='3' y='3' width='788' height='1117' />
+	</g>
+
+	<g stroke='hsl(var(--hsl-white))' stroke-width="6">
+		<rect x='363' y='940' width='428' height='180' fill='url(#horizontal-stripes)' />
+	</g>
+
+	<g fill='hsl(var(--hsl-blue))'>
+		<path d='M6,180 a87,87 0 1 1 174,0Z' />
+		<circle r='87' cx='363' cy='1030' />
+		<circle r='87' cx='537' cy='1030' />
+		<circle r='87' cx='711' cy='1030' />
+		<rect x='711' y='943' width='180' height='174' />
+	</g>
+
+	<g stroke='hsl(var(--hsl-white))' stroke-width="6" fill='hsl(var(--hsl-blue))'>
+		<rect x='3' y='183' width='180' height='758' />
+		<rect x='3' y='940' width='180' height='96' />
+	</g>
+
+
+	<g fill='hsl(var(--hsl-pink-l))'>
+		<!-- <path d='M363,943 a87,87 0 1 0 0,174Z' /> -->
+	</g>
+
+	<g stroke='hsl(var(--hsl-white))' stroke-width="6" fill='none'>
+		<rect x='3' y='3' width='180' height='180' />
+		<rect x='183' y='137' width='100%' height='46' />
+		<rect x='183' y='137' width='46' height='46' />
+		<rect x='336' y='137' width='46.5' height='46' />
+		<rect x='382.5' y='137' width='46' height='46' />
+		<rect x='508' y='137' width='46.5' height='46' />
+		<rect x='554.5' y='137' width='46' height='46' />
+		<rect x='744' y='137' width='46.5' height='46' />
+		<rect x='3' y='940' width='180' height='180' />
+		<rect x='183' y='940' width='180' height='180' />
+	</g>
+</svg>

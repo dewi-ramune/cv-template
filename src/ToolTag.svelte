@@ -23,8 +23,10 @@
   }
 
   .tag {
-    color: white;
+    /* color: white; */
     font-weight: 500;
+    border: solid 2px navy;
+    background-color: hsla(0, 0%, 100%, 0.7) !important;
   }
 
   .figma {
