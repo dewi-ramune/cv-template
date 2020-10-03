@@ -33,11 +33,11 @@
 </style>
 
 <div class="job">
-  <!-- <header>
+  <header>
     <h1>{client}, {where}</h1>
     <b />
     <h1>{when}</h1>
-  </header> -->
+  </header>
   <ul class="projects">
     <slot />
   </ul>

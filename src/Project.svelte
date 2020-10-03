@@ -38,7 +38,7 @@
 <li class="project">
   <header>
     <h3>{role}</h3>
-    <slot class="tools" name="tools" />
+    <!-- <slot class="tools" name="tools" /> -->
   </header>
   <ul>
     <slot />

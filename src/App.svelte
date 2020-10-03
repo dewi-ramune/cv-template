@@ -38,7 +38,7 @@
     gap: var(--width-border);
     background-color: var(--bgrd);
     padding: var(--width-border);
-    background: url(../grid.svg);
+    /* background: url(../grid.svg); */
     background-size: 100%;
   }
 
@@ -125,10 +125,9 @@
 </style>
 
 <main>
-
   <Header />
 
-  <div class="content-section ">
+  <div class="content-section">
     <header class="section-header">Experience</header>
   </div>
   <div class="content-section experience">
@@ -242,7 +241,6 @@
 
     <Job client="Marubeni" where="London" when="Oct-08 – Dec-11">
       <Project role="ANALYST">
-
         <li>
           Selected from over 29,000 employees worldwide to attend annual
           training workshop at Tokyo HQ.
@@ -319,5 +317,4 @@
       <p>Agile</p>
     </div>
   </div>
-
 </main>

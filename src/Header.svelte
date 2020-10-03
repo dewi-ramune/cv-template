@@ -1,5 +1,4 @@
 <script>
-
 </script>
 
 <style>
@@ -70,6 +69,14 @@
   .contact > p {
     padding: var(--spacing) var(--width-border);
   }
+
+  .feather {
+    display: block;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 </style>
 
 <header>
@@ -83,7 +90,6 @@
     </h1>
     <!-- <h2>ゴンザレス　デゥイ</h2> -->
     <p>UX Designer / Developer</p>
-
   </div>
 
   <div class="content-section profile">
@@ -97,10 +103,28 @@
   </div>
 
   <div class="contact">
-    <b />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      class="feather">
+      <path
+        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
+    </svg>
     <p>dewi@ramune.io</p>
     <b />
-    <b />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      class="feather">
+      <path
+        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
+    </svg>
     <p>dewiwaugh</p>
     <b />
     <b />
