@@ -1,6 +1,7 @@
 <script>
   export let client;
   export let when;
+  export let where;
 </script>
 
 <style>
@@ -15,8 +16,11 @@
     text-align: right;
   }
 
-  .where {
+  .who {
     font-weight: 500;
+  }
+  .where {
+    display: none;
   }
 
   ul {
@@ -27,6 +31,7 @@
 <div class="job">
   <header>
     <h3 class="when">{when}</h3>
+    <h3 class="who">{client}</h3>
     <h3 class="where">{client}</h3>
   </header>
   <ul>

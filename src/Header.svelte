@@ -2,16 +2,13 @@
   header {
     grid-column: 1/-1;
     margin: 0;
-    /* height: var(--width-square-1); */
     display: grid;
     grid-template-columns: var(--width-square-1) 1fr;
     grid-template-rows: 1fr auto;
-    /* gap: var(--width-border); */
     align-items: center;
   }
 
   h1 {
-    font-family: "Big John", Avenir, sans-serif;
     font-size: 27px;
     line-height: 1.125em;
     padding: 0;

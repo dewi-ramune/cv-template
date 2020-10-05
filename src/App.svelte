@@ -26,11 +26,6 @@
   }
 
   @font-face {
-    font-family: Big John;
-    src: url("./BIG JOHN.otf") format("opentype");
-  }
-
-  @font-face {
     font-family: Slim Joe;
     src: url("./Slim Joe.otf") format("opentype");
   }
@@ -47,8 +42,6 @@
     display: grid;
     grid-template-columns: var(--width-square-1) 1fr var(--width-square-1);
     grid-template-rows: auto 1fr var(--width-square-1);
-    /* gap: var(--width-border); */
-    /* padding: var(--width-border); */
     background: url(../grid.svg);
     background-size: 100%;
     border: solid var(--width-border) var(--clr-border);
@@ -116,10 +109,6 @@
     font-weight: 600;
   }
 
-  li {
-    list-style-position: inside;
-  }
-
   .emphasis {
     text-decoration: underline;
     text-decoration-color: hsla(52, 98%, 51%, 1);
@@ -128,12 +117,12 @@
 
   .brackets::before {
     content: "(";
-    font-weight: 900;
+    font-weight: 600;
     color: hsla(52, 98%, 51%, 1);
   }
   .brackets::after {
     content: ")";
-    font-weight: 900;
+    font-weight: 600;
     color: hsla(52, 98%, 51%, 1);
   }
 </style>
@@ -267,8 +256,8 @@
     <div class="content-section">
       <h2 class="section-header">Education</h2>
       <div>
-        <span class="text-h3">UNIVERSITY OF BATH, UK</span>
-        <p>BSc (Hons) Mathematics 2:1</p>
+        <span class="text-h3">UNIVERSITY OF BATH</span>
+        <p>BSc Hons Mathematics 2:1</p>
       </div>
     </div>
     <span />
