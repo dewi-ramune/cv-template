@@ -10,12 +10,12 @@
     --text-colour: hsl(220, 100%, 0%);
     --primary: hsl(0, 0%, 90%);
     --bgrd: hsl(350, 100%, 97%);
-    --clr-border: hsl(0, 0%, 100%);
+    --clr-border: hsl(0, 0%, 0%);
     --width-border: 6px;
     --width-avatar: 48px;
     --width-square-1: 174px;
     --border: solid var(--width-border) var(--clr-border);
-    --spacing: 1em;
+    --spacing: 0.8125rem;
     --spacing-1: calc(var(--spacing) / 4);
     --spacing-2: calc(var(--spacing) / 2);
     --spacing-5: calc(var(--spacing) * 2);
@@ -25,31 +25,45 @@
     margin: 0;
   }
 
+  @font-face {
+    font-family: Big John;
+    src: url("./BIG JOHN.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Slim Joe;
+    src: url("./Slim Joe.otf") format("opentype");
+  }
+
   * {
+    font-size: 13px;
     color: var(--text-colour);
     box-sizing: border-box;
   }
 
   main {
+    width: 794px;
+    height: 1122px;
     display: grid;
     grid-template-columns: var(--width-square-1) 1fr var(--width-square-1);
-    grid-template-rows: var(--width-square-1) 751px var(--width-square-1);
-    gap: var(--width-border);
-    padding: var(--width-border);
+    grid-template-rows: auto 1fr var(--width-square-1);
+    /* gap: var(--width-border); */
+    /* padding: var(--width-border); */
     background: url(../grid.svg);
     background-size: 100%;
+    border: solid var(--width-border) var(--clr-border);
   }
 
   .content-section {
     display: flex;
     flex-direction: column;
-    padding: var(--width-border);
+    padding: 12px var(--width-border);
     position: relative;
   }
 
   .text-h3 {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 13px;
     text-transform: uppercase;
   }
 
@@ -58,7 +72,11 @@
     height: 100%;
     max-height: 100%;
     display: grid;
-    grid-template-rows: auto repeat(4, auto 1fr) auto 1rem;
+    grid-template-rows: auto repeat(4, auto 1fr) auto;
+    border-bottom: solid var(--width-border) var(--clr-border);
+  }
+  .experience p {
+    margin-bottom: 8px;
   }
 
   .education {
@@ -69,8 +87,10 @@
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33px 1.5rem auto 1.5rem auto;
+    grid-template-rows: 29px 18px auto 18px auto;
     column-gap: var(--spacing-5);
+    border: solid var(--clr-border);
+    border-width: 0 var(--width-border);
   }
   .skills > .section-header {
     grid-column: 1/-1;
@@ -84,24 +104,37 @@
   }
 
   .skill-block {
-    margin: var(--spacing-2) 0;
-    display: grid;
-  }
-
-  .skill-block.first {
-    margin-top: 0;
+    margin-bottom: var(--spacing-2);
   }
 
   .section-header {
-    font-size: 21px;
+    font-family: "Slim Joe", Avenir, sans-serif;
+    font-size: 22px;
     line-height: 1em;
-    margin: 0 0 var(--spacing-2) 0;
+    margin-bottom: 8px;
     text-transform: uppercase;
     font-weight: 600;
   }
 
   li {
     list-style-position: inside;
+  }
+
+  .emphasis {
+    text-decoration: underline;
+    text-decoration-color: hsla(52, 98%, 51%, 1);
+    text-decoration-style: wavy;
+  }
+
+  .brackets::before {
+    content: "(";
+    font-weight: 900;
+    color: hsla(52, 98%, 51%, 1);
+  }
+  .brackets::after {
+    content: ")";
+    font-weight: 900;
+    color: hsla(52, 98%, 51%, 1);
   }
 </style>
 
@@ -114,30 +147,33 @@
       client="A2B Assessments"
       where="Tokyo / London"
       when="Nov 2018 - Current">
-      <Project role="DESIGN LEAD / DEVELOPER">
+      <Project role="DESIGN LEAD / UX DEVELOPER">
         <span slot="tools">
           <ToolTag tag="figma" />
           <ToolTag tag="react" />
           <ToolTag tag="css" />
         </span>
         <p>
-          Design lead and main front-end developer to replace a legacy system
-          with a bespoke cloud-based CRM. Front-end built in React with GraphQL
-          integration and BDD integration testing in Cypress. I created a brand
-          new design system and UI component library with an emphasis on user
+          Design lead and UX developer to replace a legacy system with a bespoke
+          cloud-based CRM. Front-end built in
+          <span class="emphasis">React</span>
+          with GraphQL integration and BDD using
+          <span class="emphasis">Cypress</span>. I created a brand new design
+          system and UI component library with an emphasis on user
           accessibility.
         </p>
 
         <p>
-          I also lead user research in order to understand and streamline
-          business processes. First I mapped their processes, and then regularly
-          met users to iterate through designs and wireframes to ensure the
-          solution was fit for purpose.
+          I also led user research in order to formulate designs. First by
+          contextual inquiry to gather requirements, map processes and identify
+          bottlenecks. This was then translated into wireframes which I iterated
+          over with users to ensure the solution was fit for purpose.
         </p>
 
         <p>
-          Currently I am prototyping a new reporting feature whilst adding to
-          their design system.
+          Currently I am prototyping a new reporting feature in
+          <span class="emphasis">Storybook</span>
+          whilst iterating over and improving the design system.
         </p>
       </Project>
     </Job>
@@ -153,18 +189,17 @@
           <ToolTag tag="css" />
         </span>
         <p>
-          Prototyped several apps in React/Vue with a focus on point-of-sale
-          systems (POS), e.g.
-          <li>
-            gas station kiosk for Orlen Stop Cafe to implement across their
-            cafes nationwide.
-          </li>
-          <li>self-service ordering/payment kiosk for KFC</li>
+          Prototyped
+          <span class="emphasis brackets">React / Vue</span>
+          several apps with a focus on point-of-sale systems (POS), including a
+          self-service ordering / payment kiosk for KFC and a gas station kiosk
+          for Orlen Stop Cafe to implement across their cafes nationwide.
         </p>
         <p>
-          Deadlines were very strict which meant rapid prototyping in React/Vue
-          as well as creating original artwork and branding guidance to the
-          team, e.g. colour palettes, typefaces.
+          Produced original artwork and high-fidelity designs
+          <span class="emphasis brackets">Illustrator</span>
+          according to strict deadlines as well as creating branding guidance
+          for the team, e.g. colour palettes, typefaces.
         </p>
       </Project>
     </Job>
@@ -176,14 +211,14 @@
           <ToolTag tag="vue" />
           <ToolTag tag="css" />
         </span>
-        <li>
-          Designed and built UI for a mobile app to distribute and manage
-          invitations and responses to company events.
-        </li>
-        <li>
-          Designed and built UI for a company branded mobile app to collect
-          customer details at trade events.
-        </li>
+        <p>
+          Designed
+          <span class="emphasis brackets">Sketch</span>
+          and built
+          <span class="emphasis brackets">Vue</span>
+          responsive app UIs for an ambitious start-up to manage new client
+          leads and distribute and manage event invitations and responses.
+        </p>
       </Project>
     </Job>
     <b />
@@ -231,7 +266,7 @@
   <div class="education">
     <div class="content-section">
       <h2 class="section-header">Education</h2>
-      <div class="skill-block first">
+      <div>
         <span class="text-h3">UNIVERSITY OF BATH, UK</span>
         <p>BSc (Hons) Mathematics 2:1</p>
       </div>
@@ -260,7 +295,6 @@
       <p>JavaScript</p>
       <p>React</p>
       <p>Vue</p>
-      <p>Svelte</p>
       <p>Cypress</p>
       <p>Cucumber</p>
     </div>
@@ -293,7 +327,7 @@
 
     <div class="skill-block">
       <span class="text-h3">JAPANESE</span>
-      <p>Studying N4</p>
+      <p>Studying N5</p>
     </div>
   </div>
 </main>

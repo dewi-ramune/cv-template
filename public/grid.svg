@@ -1,13 +1,13 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 794 1123"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 794 1128"
 	xml:space="preserve">
 
 	<style>
 		:root {
 			--clr-black: #000;
 			--clr-white: #fff;
-			--clr-1: hsl(52, 98%, 51%);
-			--clr-2: hsla(1, 97%, 59%);
-			--clr-3: hsla(241, 100%, 44%, .9);
+			--clr-1: hsla(52, 98%, 51%, 1);
+			--clr-2: hsla(1, 97%, 59%, 1);
+			--clr-3: hsla(241, 100%, 64%, 1);
 		}
 	</style>
 
@@ -21,43 +21,29 @@
 		</pattern>
 	</defs>
 
-	<g stroke='var(--clr-black)' stroke-width="1" fill="none">
-		<path d="M183,230 L183,880" />
+	<g stroke='var(--clr-black)' stroke-width="1" fill="none" opacity=".6">
+		<path d="M161,215 l0,662" />
+		<path d="M158,215 l6,0" />
+		<path d="M158,877 l6,0" />
+	</g>
+
+	<g fill='var(--clr-2)' opacity=".9">
+		<circle r="10" cx="161" cy='215' />
+		<circle r="10" cx="161" cy='427' />
+		<circle r="10" cx="161" cy='575' />
+		<circle r="10" cx="161" cy='662' />
+		<circle r="10" cx="161" cy='877' />
 	</g>
 
 	<g fill='var(--clr-2)'>
-		<rect x='183' y='137' width='46' height='46' />
-		<path d='M788,943 a86,86 0 0 0 0,174Z' opacity=".7" />
-		<circle r="10" cx="183" cy='233.5' />
-		<circle r="10" cx="183" cy='430' />
-		<circle r="10" cx="183" cy='530' />
-		<circle r="10" cx="183" cy='630' />
-		<circle r="10" cx="183" cy='879' />
+		<path d='M794,949 a86,86 0 0 0 0,178Z' opacity=".8" />
 	</g>
 
 	<g fill='var(--clr-3)'>
-		<rect x='382.5' y='137' width='46' height='46' />
-		<rect x='3' y='1030' width='180' height='90' />
+		<rect x='0' y='1040' width='180' height='90' />
 	</g>
-
 
 	<g fill='var(--clr-1)'>
-		<path d='M6,180 a86,86 0 1 1 174,0Z' />
-		<rect x='554' y='137' width='46' height='46' />
+		<path d='M0,161 a87,87 0 1 1 178,0Z' />
 	</g>
-
-
-	<g stroke='var(--clr-black)' stroke-width="6" fill='none'>
-		<rect x='3' y='3' width='788' height='1117' />
-		<rect x='3' y='3' width='180' height='180' />
-		<line x1="0" x2="183" y1="183" y2="183" />
-		<rect x='183' y='137' width='608' height='46' />
-		<rect x='183' y='137' width='46' height='46' />
-		<rect x='382.5' y='137' width='46' height='46' />
-		<rect x='554' y='137' width='46' height='46' />
-		<rect x='183' y='940' width='428' height='180' />
-		<rect x='3' y='940' width='788' height='180' />
-	</g>
-
-
 </svg>

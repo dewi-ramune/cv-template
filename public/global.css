@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Gilbert;
-  src: url("./Gilbert-Bold Preview5.otf") format("opentype");
-}
-
 * {
   font-size: 16px;
   font-weight: 400;
@@ -21,8 +16,6 @@ body {
 body {
   margin: 0;
   padding: 0;
-  width: 794px;
-  height: 1123px;
 }
 
 h1,

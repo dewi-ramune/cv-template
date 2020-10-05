@@ -7,15 +7,16 @@
   .job {
     display: grid;
     grid-template-columns: var(--width-square-1) 1fr;
-    column-gap: 1.5rem;
   }
 
   h3 {
-    font-size: 1em;
-    padding: 0 2rem 0 0;
-    margin: 0;
-    font-weight: 100;
+    font-size: 13px;
+    padding: 0 3rem 0 0;
     text-align: right;
+  }
+
+  .where {
+    font-weight: 500;
   }
 
   ul {
@@ -26,7 +27,7 @@
 <div class="job">
   <header>
     <h3 class="when">{when}</h3>
-    <h3>{client}</h3>
+    <h3 class="where">{client}</h3>
   </header>
   <ul>
     <slot />
