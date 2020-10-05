@@ -3,12 +3,11 @@
   import Job from "./Job.svelte";
   import Project from "./Project.svelte";
   import ToolTag from "./ToolTag.svelte";
-  import ProjectContent from "./ProjectContent.svelte";
 </script>
 
 <style>
   :root {
-    --text-colour: hsl(220, 100%, 20%);
+    --text-colour: hsl(220, 100%, 0%);
     --primary: hsl(0, 0%, 90%);
     --bgrd: hsl(350, 100%, 97%);
     --clr-border: hsl(0, 0%, 100%);
@@ -33,12 +32,11 @@
 
   main {
     display: grid;
-    grid-template-columns: var(--width-square-1) var(--width-square-1) 1fr;
+    grid-template-columns: var(--width-square-1) 1fr var(--width-square-1);
     grid-template-rows: var(--width-square-1) 751px var(--width-square-1);
     gap: var(--width-border);
-    background-color: var(--bgrd);
     padding: var(--width-border);
-    /* background: url(../grid.svg); */
+    background: url(../grid.svg);
     background-size: 100%;
   }
 
@@ -49,10 +47,40 @@
     position: relative;
   }
 
-  .section-header {
-    font-size: 1.75em;
-    margin: 0 0 var(--spacing-2) 0;
+  .text-h3 {
+    font-weight: 600;
+    font-size: 1rem;
     text-transform: uppercase;
+  }
+
+  .experience {
+    grid-column: 1/-1;
+    height: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: auto repeat(4, auto 1fr) auto 1rem;
+  }
+
+  .education {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33px 1.5rem auto 1.5rem auto;
+    column-gap: var(--spacing-5);
+  }
+  .skills > .section-header {
+    grid-column: 1/-1;
+  }
+
+  .skills p {
+    display: inline-block;
+  }
+  .skills p:not(:last-child)::after {
+    content: "\00a0\25cf\00a0";
   }
 
   .skill-block {
@@ -64,107 +92,59 @@
     margin-top: 0;
   }
 
-  .skills p {
-    display: inline-block;
-  }
-  .skills p:not(:last-child)::after {
-    content: "\00a0\25cf\00a0";
-    /* content: "\00a0\2b24\00a0";
-    font-size: 0.75rem; */
-    /* color: var(--clr-border); */
-  }
-
-  .text-h3 {
-    font-weight: 600;
-    font-size: 1rem;
+  .section-header {
+    font-size: 21px;
+    line-height: 1em;
+    margin: 0 0 var(--spacing-2) 0;
     text-transform: uppercase;
+    font-weight: 600;
   }
 
-  .experience {
-    grid-column: 2/-1;
-    /* border-bottom: var(--border); */
-    height: 100%;
-    max-height: 100%;
-  }
-
-  .education {
-    /* border-right: var(--border); */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .skills {
-    /* border-right: var(--border); */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33px 1.5rem auto 1.5rem auto;
-    column-gap: var(--spacing-5);
-    /* background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent var(--width-border),
-      var(--clr-border) var(--width-border),
-      var(--clr-border) calc(2 * var(--width-border))
-    ); */
-  }
-  .skills > header {
-    grid-column: 1/-1;
-  }
-
-  .stripes {
-    height: 100%;
-    background: repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent var(--width-border),
-      var(--clr-border) var(--width-border),
-      var(--clr-border) calc(2 * var(--width-border))
-    );
-    border-top: var(--border);
+  li {
+    list-style-position: inside;
   }
 </style>
 
 <main>
   <Header />
 
-  <div class="content-section">
-    <header class="section-header">Experience</header>
-  </div>
   <div class="content-section experience">
+    <h2 class="section-header">Experience</h2>
     <Job
       client="A2B Assessments"
       where="Tokyo / London"
-      when="Nov-18 – Current">
+      when="Nov 2018 - Current">
       <Project role="DESIGN LEAD / DEVELOPER">
         <span slot="tools">
           <ToolTag tag="figma" />
           <ToolTag tag="react" />
           <ToolTag tag="css" />
         </span>
-        <li>
-          Design lead and main front-end developer to replace a
-          spreadsheet-based legacy system with a bespoke cloud-based CRM.
-        </li>
-        <li>
-          Built and maintained a brand new design system and UI component
-          library with an emphasis on user accessibility.
-        </li>
-        <li>Created wireframes / prototypes.</li>
-        <li>
-          Engaged users in weekly meetings to iterate through designs and ensure
-          prototypes were fit for purpose.
-        </li>
-        <li>
-          Front-end development with GraphQL integration and BDD integration
-          testing in Cypress.
-        </li>
-        <li>Ran workshops and shadowed users to gather requirements.</li>
-        <li>Produced and maintained user journeys and process maps.</li>
+        <p>
+          Design lead and main front-end developer to replace a legacy system
+          with a bespoke cloud-based CRM. Front-end built in React with GraphQL
+          integration and BDD integration testing in Cypress. I created a brand
+          new design system and UI component library with an emphasis on user
+          accessibility.
+        </p>
+
+        <p>
+          I also lead user research in order to understand and streamline
+          business processes. First I mapped their processes, and then regularly
+          met users to iterate through designs and wireframes to ensure the
+          solution was fit for purpose.
+        </p>
+
+        <p>
+          Currently I am prototyping a new reporting feature whilst adding to
+          their design system.
+        </p>
       </Project>
     </Job>
+    <b />
 
-    <Job client="Various Clients" where="London" when="Jun-17 – Nov-18">
-      <Project role="CREATIVE TECHNOLOGIST">
+    <Job client="Various Clients" where="London" when="Jun 2017 - Nov 2018">
+      <Project role="UX PROTOTYPER">
         <span slot="tools">
           <ToolTag tag="illustrator" />
           <ToolTag tag="photoshop" />
@@ -172,25 +152,24 @@
           <ToolTag tag="vue" />
           <ToolTag tag="css" />
         </span>
-        <li>
-          Designed a gas station kiosk prototype for Orlen Stop Cafe to
-          implement across their cafes nationwide.
-        </li>
-        <li>
-          Designed a self-service kiosk protoype for KFC to be demoed at a
-          tradeshow.
-        </li>
-        <li>
-          Logo design and branding guidance, e.g. colour palettes, typefaces.
-        </li>
-        <li>
-          Collaborated with project team to prepare proposals, wireframes and
-          original artwork for client bids.
-        </li>
+        <p>
+          Prototyped several apps in React/Vue with a focus on point-of-sale
+          systems (POS), e.g.
+          <li>
+            gas station kiosk for Orlen Stop Cafe to implement across their
+            cafes nationwide.
+          </li>
+          <li>self-service ordering/payment kiosk for KFC</li>
+        </p>
+        <p>
+          Deadlines were very strict which meant rapid prototyping in React/Vue
+          as well as creating original artwork and branding guidance to the
+          team, e.g. colour palettes, typefaces.
+        </p>
       </Project>
     </Job>
-
-    <Job client="CREAT3D" where="Reading" when="Jan-17 – Feb-18">
+    <b />
+    <Job client="CREAT3D" where="Reading" when="Jan 2017 - Feb 2018">
       <Project role="DESIGNER / FRONT-END DEVELOPER">
         <span slot="tools">
           <ToolTag tag="sketch" />
@@ -207,80 +186,61 @@
         </li>
       </Project>
     </Job>
+    <b />
 
-    <Job client="EDF Energy" where="London" when="Jan-12 – Nov-16">
+    <Job client="EDF Energy" where="London" when="Jan 2012 - Nov 2016">
       <Project role="RISK OPERATIONS MANAGER">
         <span slot="tools">
           <ToolTag tag="javascript" />
           <ToolTag tag="html" />
           <ToolTag tag="css" />
         </span>
-        <li>
+        <p>
           Managed a team of 6 analysts to provide accurate and timely MI
-          reporting.
-        </li>
-        <li>
-          Collaborated with project team to prepare proposals, wireframes and
-          original artwork for client bids.
-        </li>
+          reporting. Transformed verbose risk regulation guidelines into a
+          user-friendly web portal.
+        </p>
       </Project>
       <Project role="SENIOR BUSINESS ANALYST">
-        <li>
+        <p>
           Responsible for stakeholder engagement across 15 different teams for
           organization-wide trading system replacement project.
-        </li>
+        </p>
       </Project>
       <Project role="SENIOR ANALYST">
-        <li>
+        <p>
           Performed data analysis and built various models and tools in VBA, MS
           Excel, MS Access, SQL, MatLab, e.g. forecasting energy prices, value
           at risk, PCA.
-        </li>
+        </p>
       </Project>
     </Job>
+    <b />
 
-    <Job client="Marubeni" where="London" when="Oct-08 – Dec-11">
+    <Job client="Marubeni" where="London" when="Oct 2008 - Dec 2011">
       <Project role="ANALYST">
-        <li>
+        <p>
+          Worked across teams for their UK-based energy trading subsidiary.
           Selected from over 29,000 employees worldwide to attend annual
           training workshop at Tokyo HQ.
-        </li>
+        </p>
       </Project>
     </Job>
   </div>
 
   <div class="education">
     <div class="content-section">
-      <header class="section-header">Education</header>
+      <h2 class="section-header">Education</h2>
       <div class="skill-block first">
         <span class="text-h3">UNIVERSITY OF BATH, UK</span>
         <p>BSc (Hons) Mathematics 2:1</p>
       </div>
     </div>
-    <span class="stripes" />
-  </div>
-
-  <div class="content-section">
-    <header class="section-header">Languages</header>
-
-    <div class="skill-block first">
-      <span class="text-h3">ENGLISH</span>
-      <p>Native</p>
-    </div>
-
-    <div class="skill-block">
-      <span class="text-h3">INDONESIAN</span>
-      <p>Fluent</p>
-    </div>
-
-    <div class="skill-block">
-      <span class="text-h3">JAPANESE</span>
-      <p>Studying N4</p>
-    </div>
+    <span />
   </div>
 
   <div class="content-section skills">
-    <header class="section-header">Skills</header>
+    <h2 class="section-header">Skills</h2>
 
     <span class="text-h3">DESIGN</span>
     <span class="text-h3">DEVELOPMENT</span>
@@ -315,6 +275,25 @@
       <p>Trello</p>
       <p>Asana</p>
       <p>Agile</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2 class="section-header">Languages</h2>
+
+    <div class="skill-block first">
+      <span class="text-h3">ENGLISH</span>
+      <p>Native</p>
+    </div>
+
+    <div class="skill-block">
+      <span class="text-h3">INDONESIAN</span>
+      <p>Fluent</p>
+    </div>
+
+    <div class="skill-block">
+      <span class="text-h3">JAPANESE</span>
+      <p>Studying N4</p>
     </div>
   </div>
 </main>
