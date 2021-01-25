@@ -7,6 +7,7 @@
     padding-bottom: 2px;
     font-size: 13px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   .project {

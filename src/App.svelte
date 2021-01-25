@@ -144,7 +144,7 @@
         </span>
         <p>
           Design lead and UX developer to replace a legacy system with a bespoke
-          cloud-based CRM. Front-end built in
+           CRM using <span class="emphasis">Elasticsearch / Cognito</span>. Built front-end in
           <span class="emphasis">React</span>
           with GraphQL integration and BDD using
           <span class="emphasis">Cypress</span>. I created a brand new design
@@ -158,18 +158,32 @@
           bottlenecks. This was then translated into wireframes which I iterated
           over with users to ensure the solution was fit for purpose.
         </p>
+      </Project>
+    </Job>
+    <b />
 
+    <Job
+            client="Intruder Systems"
+            where="Tokyo / London"
+            when="Aug 2020 - Current">
+      <Project role="DESIGN LEAD / UX Prototyper">
+        <span slot="tools">
+          <ToolTag tag="figma" />
+          <ToolTag tag="vue" />
+        </span>
         <p>
-          Currently I am prototyping a new reporting feature in
-          <span class="emphasis">Storybook</span>
-          whilst iterating over and improving the design system.
+          Used
+          <span class="emphasis">Vue</span> and  <span class="emphasis">Tailwind</span>
+         to deliver rapid prototyping of app restructure and rebrand. Worked closely with client's dev team to plan transition to new design.
+
         </p>
+
       </Project>
     </Job>
     <b />
 
     <Job client="Various Clients" where="London" when="Jun 2017 - Nov 2018">
-      <Project role="UX PROTOTYPER">
+      <Project role="Creative Technologist">
         <span slot="tools">
           <ToolTag tag="illustrator" />
           <ToolTag tag="photoshop" />
@@ -179,14 +193,13 @@
         </span>
         <p>
           Prototyped
-          <span class="emphasis brackets">React / Vue</span>
+          (<span class="emphasis">React / Vue</span>)
           several apps with a focus on point-of-sale systems (POS), including a
           self-service ordering / payment kiosk for KFC and a gas station kiosk
           for Orlen Stop Cafe to implement across their cafes nationwide.
         </p>
         <p>
           Produced original artwork and high-fidelity designs
-          <span class="emphasis brackets">Illustrator</span>
           according to strict deadlines as well as creating branding guidance
           for the team, e.g. colour palettes, typefaces.
         </p>
@@ -202,9 +215,7 @@
         </span>
         <p>
           Designed
-          <span class="emphasis brackets">Sketch</span>
           and built
-          <span class="emphasis brackets">Vue</span>
           responsive app UIs for an ambitious start-up to manage new client
           leads and distribute and manage event invitations and responses.
         </p>
@@ -220,10 +231,7 @@
           <ToolTag tag="css" />
         </span>
         <p>
-          Managed a team of 6 analysts to provide accurate and timely MI
-          reporting. Transformed verbose risk regulation guidelines into a
-          user-friendly web portal.
-        </p>
+          Responsible for ensuring compliance of commodities trading desk. Mentored and coached team of 6 analysts to deliver their best in a high-pressure environment.        </p>
       </Project>
       <Project role="SENIOR BUSINESS ANALYST">
         <p>
@@ -269,11 +277,10 @@
     <span class="text-h3">DESIGN</span>
     <span class="text-h3">DEVELOPMENT</span>
     <div>
+      <p>Figma</p>
       <p>Photoshop</p>
       <p>Illustrator</p>
-      <p>XD</p>
       <p>Sketch</p>
-      <p>Figma</p>
       <p>Storybook</p>
       <p>pen & paper</p>
     </div>
