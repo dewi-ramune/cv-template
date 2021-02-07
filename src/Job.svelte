@@ -17,8 +17,10 @@
   }
 
   .who {
-    font-weight: 500;
-  }
+    padding-bottom: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;  }
   .where {
     display: none;
   }
@@ -30,9 +32,9 @@
 
 <div class="job">
   <header>
-    <h3 class="when">{when}</h3>
     <h3 class="who">{client}</h3>
-    <h3 class="where">{client}</h3>
+    <h3 class="when">{when}</h3>
+    <h3 class="where">{where}</h3>
   </header>
   <ul>
     <slot />

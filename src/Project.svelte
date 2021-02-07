@@ -5,7 +5,7 @@
 <style>
   h3 {
     padding-bottom: 2px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
   }

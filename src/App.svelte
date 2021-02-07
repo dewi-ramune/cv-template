@@ -51,12 +51,11 @@
     display: flex;
     flex-direction: column;
     padding: 12px var(--width-border);
-    position: relative;
   }
 
   .text-h3 {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
   }
 
@@ -65,7 +64,7 @@
     height: 100%;
     max-height: 100%;
     display: grid;
-    grid-template-rows: auto repeat(4, auto 1fr) auto;
+    grid-template-rows: auto repeat(5, auto 1fr) auto;
     border-bottom: solid var(--width-border) var(--clr-border);
   }
   .experience p {
@@ -79,9 +78,8 @@
 
   .skills {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 10fr 11fr;
     grid-template-rows: 29px 18px auto 18px auto;
-    column-gap: var(--spacing-5);
     border: solid var(--clr-border);
     border-width: 0 var(--width-border);
   }
@@ -102,7 +100,7 @@
 
   .section-header {
     font-family: "Slim Joe", Avenir, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1em;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -135,7 +133,7 @@
     <Job
       client="A2B Assessments"
       where="Tokyo / London"
-      when="Nov 2018 - Current">
+      when="Nov 2018–Current">
       <Project role="DESIGN LEAD / UX DEVELOPER">
         <span slot="tools">
           <ToolTag tag="figma" />
@@ -143,21 +141,22 @@
           <ToolTag tag="css" />
         </span>
         <p>
-          Design lead and UX developer to replace a legacy system with a bespoke
-           CRM using <span class="emphasis">Elasticsearch / Cognito</span>. Built front-end in
+          Design lead and UX developer to replace an internal legacy system with a
+           CRM deployed on  <span class="emphasis">AWS</span> (Elasticsearch / Cognito). Built front-end in
           <span class="emphasis">React</span>
           with GraphQL integration and BDD using
-          <span class="emphasis">Cypress</span>. I created a brand new design
+          <span class="emphasis">Cypress</span>.
+        </p>
+
+        <p>
+          Led UXR and brainstorming sessions to formulate designs and optimise business processes.         </p>
+
+        <p>Responsible for user flows, art direction and creating a brand new design
           system and UI component library with an emphasis on user
           accessibility.
         </p>
 
-        <p>
-          I also led user research in order to formulate designs. First by
-          contextual inquiry to gather requirements, map processes and identify
-          bottlenecks. This was then translated into wireframes which I iterated
-          over with users to ensure the solution was fit for purpose.
-        </p>
+        <p>Currently building new, fully responsive, customer-facing features with <span class="emphasis">TypeScript</span>.</p>
       </Project>
     </Job>
     <b />
@@ -165,16 +164,15 @@
     <Job
             client="Intruder Systems"
             where="Tokyo / London"
-            when="Aug 2020 - Current">
+            when="Aug 2020–Current">
       <Project role="DESIGN LEAD / UX Prototyper">
         <span slot="tools">
           <ToolTag tag="figma" />
           <ToolTag tag="vue" />
         </span>
         <p>
-          Used
-          <span class="emphasis">Vue</span> and  <span class="emphasis">Tailwind</span>
-         to deliver rapid prototyping of app restructure and rebrand. Worked closely with client's dev team to plan transition to new design.
+
+         Prototyped a consumer-facing cybersecurity product restructure and rebrand in <span class="emphasis">Vue</span> / <span class="emphasis">Storybook</span> / <span class="emphasis">Tailwind</span>. Worked closely with client's dev team to plan transition to new design.
 
         </p>
 
@@ -182,7 +180,7 @@
     </Job>
     <b />
 
-    <Job client="Various Clients" where="London" when="Jun 2017 - Nov 2018">
+    <Job client="Various Clients" where="London" when="Jun 2017–Nov 2018">
       <Project role="Creative Technologist">
         <span slot="tools">
           <ToolTag tag="illustrator" />
@@ -206,7 +204,7 @@
       </Project>
     </Job>
     <b />
-    <Job client="CREAT3D" where="Reading" when="Jan 2017 - Feb 2018">
+    <Job client="CREAT3D" where="Reading" when="Jan 2017–Feb 2018">
       <Project role="DESIGNER / FRONT-END DEVELOPER">
         <span slot="tools">
           <ToolTag tag="sketch" />
@@ -223,7 +221,7 @@
     </Job>
     <b />
 
-    <Job client="EDF Energy" where="London" when="Jan 2012 - Nov 2016">
+    <Job client="EDF Energy" where="London" when="Jan 2012–Nov 2016">
       <Project role="RISK OPERATIONS MANAGER">
         <span slot="tools">
           <ToolTag tag="javascript" />
@@ -241,15 +239,14 @@
       </Project>
       <Project role="SENIOR ANALYST">
         <p>
-          Performed data analysis and built various models and tools in VBA, MS
-          Excel, MS Access, SQL, MatLab, e.g. forecasting energy prices, value
+          Performed data analysis and built various models and tools in VBA and MatLab, e.g. forecasting energy prices, value
           at risk, PCA.
         </p>
       </Project>
     </Job>
     <b />
 
-    <Job client="Marubeni" where="London" when="Oct 2008 - Dec 2011">
+    <Job client="Marubeni" where="London" when="Oct 2008–Dec 2011">
       <Project role="ANALYST">
         <p>
           Worked across teams for their UK-based energy trading subsidiary.
@@ -278,8 +275,8 @@
     <span class="text-h3">DEVELOPMENT</span>
     <div>
       <p>Figma</p>
+      <p>Adobe Illustrator</p>
       <p>Photoshop</p>
-      <p>Illustrator</p>
       <p>Sketch</p>
       <p>Storybook</p>
       <p>pen & paper</p>
@@ -289,6 +286,7 @@
       <p>CSS</p>
       <p>SVG</p>
       <p>JavaScript</p>
+      <p>TypeScript</p>
       <p>React</p>
       <p>Vue</p>
       <p>Cypress</p>
@@ -317,13 +315,13 @@
     </div>
 
     <div class="skill-block">
-      <span class="text-h3">INDONESIAN</span>
-      <p>Fluent</p>
+      <span class="text-h3">JAPANESE</span>
+      <p>Studying N5</p>
     </div>
 
     <div class="skill-block">
-      <span class="text-h3">JAPANESE</span>
-      <p>Studying N5</p>
+      <span class="text-h3">INDONESIAN</span>
+      <p>Fluent</p>
     </div>
   </div>
 </main>
