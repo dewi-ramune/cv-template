@@ -22,16 +22,17 @@
 	</defs>
 
 	<g stroke='var(--clr-black)' stroke-width="1" fill="none" opacity=".6">
-		<path d="M161,211 l0,669" />
-		<path d="M158,211 l6,0" />
-		<path d="M158,880 l6,0" />
+		<path d="M161,200 L161,880" />
+		<circle r="2" cx="161" cy='201' fill='var(--clr-black)' />
+		<circle r="2" cx="161" cy='880'  fill='var(--clr-black)'/>
 	</g>
 
 	<g fill='var(--clr-2)' opacity=".9">
-		<circle r="10" cx="161" cy='211' />
-		<circle r="10" cx="161" cy='422' />
-		<circle r="10" cx="161" cy='573' />
-		<circle r="10" cx="161" cy='665' />
+		<circle r="10" cx="161" cy='201' />
+		<circle r="10" cx="161" cy='376' />
+		<circle r="10" cx="161" cy='457' />
+		<circle r="10" cx="161" cy='597' />
+		<circle r="10" cx="161" cy='679' />
 		<circle r="10" cx="161" cy='880' />
 	</g>
 

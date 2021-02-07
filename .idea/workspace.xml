@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c68dab90-11bb-49bf-9387-fe9b9843fbbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/grid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/grid.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Job.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611537376482</updated>
       <workItem from="1611537379762" duration="398000" />
-      <workItem from="1611538028969" duration="4913000" />
+      <workItem from="1611538028969" duration="15790000" />
     </task>
     <servers />
   </component>

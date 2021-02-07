@@ -93,7 +93,7 @@
 
   .section-header {
     font-family: "Slim Joe", Avenir, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1em;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -105,14 +105,14 @@
   <div class="name">
     <!-- <img alt="avatar" src="dewi.svg" /> -->
     <h1>Dewi <br /> Gonzalez</h1>
-    <!-- <span class="kana">ゴンザレス　デゥイ</span> -->
+<!--     <span class="kana">ゴンザレス　デゥイ</span>-->
     <p>UX Designer / Developer</p>
   </div>
 
   <div class="content-section">
     <h2 class="section-header">profile</h2>
     <p>
-      I am a UX designer who is equally passionate about front-end development. As the co-founder of a software consultancy, I am adept at balancing multiple clients and projects. Able to take ideas from conceptualization all the way through to wireframing, prototyping and production.
+      I am a UX designer who accidentally learned to love coding. As the co-founder of a software consultancy, I am adept at presenting to stakeholders and balancing multiple projects. Able to take ideas from conceptualization all the way through to wireframing, prototyping and production.
     </p>
   </div>
 
